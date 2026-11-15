@@ -1,0 +1,54 @@
+modLoader="javafml"
+loaderVersion="[50,)"
+license="All Rights Reserved"
+clientSideOnly=true
+
+[[mods]]
+modId="euphoria_pacing_extended"
+version="0.6.0"
+displayName="Euphoria Pacing Extended"
+authors="AtomicX"
+logoFile="euphoria_logo.png"
+logoBlur=false
+credits="Original code by AtomicX"
+description='''Euphoria Pacing Extended (EPE): client-side rendering and frame-pacing optimizer for low-end hardware.
+
+- EPE chunk draw-list engine: custom zero-allocation draw builder for SectionRenderDispatcher.
+- Adaptive block entity culling: eliminates storage room and mob farm frame drops.
+- Dynamic quality governor: strict hysteresis and VSync-aware scaling.
+- Smoother chunk loading: time-budgeted mesh uploads and proximity-aware rebuilds.
+- Smart particle culling and per-tick burst cap.
+- Frame stats (avg FPS, 1% low, worst frame) logged every 10 seconds.
+- Full Sodium / Embeddium co-existence.
+'''
+
+[[mixins]]
+config="euphoria_pacing_extended.mixins.json"
+
+[[dependencies.euphoria_pacing_extended]]
+    modId="forge"
+    mandatory=true
+    versionRange="[50,)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.euphoria_pacing_extended]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.5,1.22)"
+    ordering="NONE"
+    side="CLIENT"
+
+[[dependencies.euphoria_pacing_extended]]
+    modId="euphoriapacing"
+    mandatory=true
+    versionRange="[0.5.0,)"
+    ordering="AFTER"
+    side="CLIENT"
+
+[[dependencies.euphoria_pacing_extended]]
+    modId="euphoriapacingbridge"
+    mandatory=true
+    versionRange="[0.5.0,)"
+    ordering="AFTER"
+    side="CLIENT"
