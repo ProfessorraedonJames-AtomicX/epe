@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Specification-Title: euphoria_pacing_extended
+Specification-Vendor: AtomicX
+Specification-Version: 1
+Implementation-Title: epe
+Implementation-Version: 0.6.0
+Implementation-Vendor: AtomicX
+Implementation-Timestamp: 2026-11-16T22:04:37+0530
+MixinConfigs: euphoria_pacing_extended.mixins.json
+
